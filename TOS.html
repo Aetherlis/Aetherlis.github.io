@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOS - Luaify</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #121212;
+            color: #e0e0e0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: #64ffda;
+            animation: glow 1.5s infinite alternate;
+        }
+
+        p, ul {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #b0bec5;
+            text-align: left;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li::before {
+            content: "\2022";
+            color: #64ffda;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        @keyframes glow {
+            0% {
+                text-shadow: 0 0 10px #64ffda, 0 0 20px #64ffda, 0 0 30px #64ffda, 0 0 40px #64ffda;
+            }
+            100% {
+                text-shadow: 0 0 20px #64ffda, 0 0 30px #64ffda, 0 0 40px #64ffda, 0 0 50px #64ffda;
+            }
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            text-align: center;
+            width: 100%;
+            font-size: 0.9rem;
+            color: #616161;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>Luaify is not responsible for any bans, account terminations, or other consequences arising from the use of our scripts.</li>
+            <li>All scripts are provided "as is" without warranties of any kind, either expressed or implied.</li>
+            <li>Luaify reserves the right to modify or discontinue any script or service without prior notice.</li>
+            <li>By downloading or using Luaify scripts, you agree to use them responsibly and in compliance with Roblox's Terms of Service.</li>
+        </ul>
+        <p><strong>Failure to comply with these terms may result in permanent blacklist</strong></p>
+    </div>
+    <footer>
+        &copy; 2024 Luaify. All rights reserved.
+    </footer>
+</body>
+</html>
