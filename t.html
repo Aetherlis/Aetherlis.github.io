@@ -9,6 +9,29 @@
     <meta content="#D2768B" data-react-helmet="true" name="theme-color">
 
     <style>
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    #ascii {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+        
         html, body {
             overflow: hidden;
             color: #000000;
@@ -388,13 +411,12 @@
 </head>
 
 <body unselectable="on">
-
     <span class="container" style="position:absolute;"></span>
     <div class="center">
         <div class="grid">
+            <!-- Timer and links -->
             <div class="center-content">
-               <p style="font-size: 150%; display: inline; white-space: nowrap;">aetherlis  </p>
-
+               <p style="font-size: 150%; display: inline; white-space: nowrap;">aetherlis</p>
                 <p id="clockDisplay" style="color:#ffffff38">xx:xx:xx AM/PM</p>
                 <br>
                 <div>
@@ -406,49 +428,49 @@
                     </a>
                 </div>
             </div>
+            <!-- GIF -->
             <div class="center-content">
                 <img src="assets/images/lain.gif" />
             </div>
         </div>
 
         <section id="ascii">
-            <div class="center">
-                <div class="centraaa">
-                    <p class="letter-0">
-                        <span style="color: rgb(160, 91, 107);" class="golden">e</span>
-                    </p>
-                    <p class="letter-1">
-                        <span style="color: rgb(160, 91, 107);" class="golden">n</span>
-                    </p>
-                    <p class="letter-2">
-                        <span style="color: rgb(160, 91, 107);" class="golden">v</span>
-                    </p>
-                    <p class="letter-3">
-                        <span style="color: rgb(160, 91, 107);" class="golden">o</span>
-                    </p>
-                    <p class="letter-4">
-                        <span style="color: rgb(160, 91, 107);" class="golden">r</span>
-                    </p>
-                    <p class="letter-5">
-                        <span style="color: rgb(160, 91, 107);" class="golden">e</span>
-                    </p>
-                    <p class="letter-6">
-                        <span style="color: rgb(160, 91, 107);" class="golden">.</span>
-                    </p>
-                    <p class="letter-7">
-                        <span style="color: rgb(160, 91, 107);" class="golden">l</span>
-                    </p>
-                    <p class="letter-8">
-                        <span style="color: rgb(160, 91, 107);" class="golden">o</span>
-                    </p>
-                    <p class="letter-9">
-                        <span style="color: rgb(160, 91, 107);" class="golden">l</span>
-                    </p>
-                </div>
+            <div class="centraaa">
+                <p class="letter-0">
+                    <span style="color: rgb(160, 91, 107);" class="golden">e</span>
+                </p>
+                <p class="letter-1">
+                    <span style="color: rgb(160, 91, 107);" class="golden">n</span>
+                </p>
+                <p class="letter-2">
+                    <span style="color: rgb(160, 91, 107);" class="golden">v</span>
+                </p>
+                <p class="letter-3">
+                    <span style="color: rgb(160, 91, 107);" class="golden">o</span>
+                </p>
+                <p class="letter-4">
+                    <span style="color: rgb(160, 91, 107);" class="golden">r</span>
+                </p>
+                <p class="letter-5">
+                    <span style="color: rgb(160, 91, 107);" class="golden">e</span>
+                </p>
+                <p class="letter-6">
+                    <span style="color: rgb(160, 91, 107);" class="golden">.</span>
+                </p>
+                <p class="letter-7">
+                    <span style="color: rgb(160, 91, 107);" class="golden">l</span>
+                </p>
+                <p class="letter-8">
+                    <span style="color: rgb(160, 91, 107);" class="golden">o</span>
+                </p>
+                <p class="letter-9">
+                    <span style="color: rgb(160, 91, 107);" class="golden">l</span>
+                </p>
+            </div>
         </section>
     </div>
 
-     <img src="assets/images/kyaru.png" style="position: fixed; bottom: 0px; right: 0px; display:inline; opacity: 0.17;" height="25%" class=""> 
+    <img src="assets/images/kyaru.png" style="position: fixed; bottom: 0px; right: 0px; display:inline; opacity: 0.17;" height="25%" class=""> 
 
     <script type="text/javascript">
         function Sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
