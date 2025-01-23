@@ -3,7 +3,6 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-
     <meta content="envore.lol" property="og:title">
     <meta content="welcome x_x" property="og:description">
     <meta content="embed.gif" property="og:image">
@@ -15,7 +14,6 @@
             color: #000000;
             background-color: #080404;
         }
-
         p {
             color: rgb(255, 255, 255);
             font-family: monospace;
@@ -29,9 +27,97 @@
             text-decoration: none !important;
         }
 
+        @keyframes fadein-text {
+            from {
+                text-shadow: 2px 2px 0px black;
+                opacity: 0;
+            }
+            to {
+                text-shadow: 2px 2px 20px black;
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadein {
+            from {
+                -webkit-filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0));
+                opacity: 0;
+            }
+            to {
+                -webkit-filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.8));
+                opacity: 1;
+            }
+        }
+
         canvas {
             display: block;
             vertical-align: bottom;
+        }
+
+        .animate-bottom {
+            position: relative;
+            -webkit-animation-name: animatebottom;
+            -webkit-animation-duration: 1s;
+            animation-name: animatebottom;
+            animation-duration: 1s
+        }
+
+        @-webkit-keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+            to {
+                bottom: 0px;
+                opacity: 1
+            }
+        }
+
+        @keyframes animatebottom {
+            from {
+                bottom: -100px;
+                opacity: 0
+            }
+            to {
+                bottom: 0;
+                opacity: 1
+            }
+        }
+
+        #loader {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            z-index: 1;
+            width: 50px;
+            height: 50px;
+            margin: -75px 0 0 -75px;
+            border: 16px solid #000000;
+            border-radius: 50%;
+            border-top: 16px solid #ff0000;
+            border-bottom: 16px solid #ff0000;
+            width: 120px;
+            height: 120px;
+            -webkit-animation: spin 2s linear infinite;
+            animation: spin 2s linear infinite;
+        }
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
         #particles-js {
@@ -47,6 +133,10 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            animation: fadein 3s;
+            -moz-animation: fadein 3s;
+            -webkit-animation: fadein 3s;
+            -o-animation: fadein 3s;
         }
 
         .centraaa {
@@ -54,6 +144,48 @@
             margin-left: auto;
             margin-right: auto;
             width: 50%;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-moz-keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-webkit-keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @-o-keyframes fadein {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        html,
+        body {
+            overflow: hidden;
+            color: #000000;
         }
 
         body {
@@ -68,6 +200,139 @@
             height: 100%;
             background-color: #000000;
         }
+
+        [class^="letter"] {
+            -webkit-transition: opacity 3s ease;
+            -moz-transition: opacity 3s ease;
+            transition: opacity 3s ease;
+        }
+
+        .letter-0 {
+            transition-delay: 0.2s;
+        }
+
+        .letter-1 {
+            transition-delay: 0.4s;
+        }
+
+        .letter-2 {
+            transition-delay: 0.6s;
+        }
+
+        .letter-3 {
+            transition-delay: 0.8s;
+        }
+
+        .letter-4 {
+            transition-delay: 1.0s;
+        }
+
+        .letter-5 {
+            transition-delay: 1.2s;
+        }
+
+        .letter-6 {
+            transition-delay: 1.4s;
+        }
+
+        .letter-7 {
+            transition-delay: 1.6s;
+        }
+
+        .letter-8 {
+            transition-delay: 1.8s;
+        }
+
+        .letter-9 {
+            transition-delay: 2.0s;
+        }
+
+        .letter-10 {
+            transition-delay: 2.2s;
+        }
+
+        .letter-11 {
+            transition-delay: 2.4s;
+        }
+
+        .letter-12 {
+            transition-delay: 2.6s;
+        }
+
+        .letter-13 {
+            transition-delay: 2.8s;
+        }
+
+        .letter-14 {
+            transition-delay: 3.0s;
+        }
+
+        .letter-15 {
+            transition-delay: 3.2s;
+        }
+
+        .overlay {
+            z-index: 1;
+            background-color: rgb(17, 17, 17);
+        }
+
+        .overlay label {
+            display: grid;
+            place-items: center;
+            width: 100vw;
+            height: 100vw;
+            color: rgb(255, 255, 255);
+            font-size: 2rem;
+        }
+
+        #overlay-toggle {
+            position: absolute;
+            display: none;
+        }
+
+        .fullscreen {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-height: 100vh;
+            min-width: 100vw;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .center {
+            text-align: center;
+            color: #ffffff;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .click-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            z-index: 10;
+        }
+
     </style>
 
     <title>focat wuz here ;p</title>
@@ -109,11 +374,20 @@
         }
 
         setInterval(loop, 300);
+
+        function audioPlay() {
+            var audio = document.getElementById("audio");
+            audio.src = assets/audio/${Math.floor(Math.random() * 6) + 1}.mp3;
+            audio.volume = 1;
+            audio.play();
+        }
     </script>
     <link rel="stylesheet" type="text/css" href="./bin/style.css">
+    <style type="text/css">.disclaimer { display: none }</style>
 </head>
 
-<body>
+<body unselectable="on">
+
     <span class="container" style="position:absolute;"></span>
     <div class="center">
         <div class="grid">
@@ -172,9 +446,11 @@
         </section>
     </div>
 
-    <img src="assets/images/kyaru.png" style="position: fixed; bottom: 0px; right: 0px; display:inline; opacity: 0.17;" height="25%" class="">
+     <img src="assets/images/kyaru.png" style="position: fixed; bottom: 0px; right: 0px; display:inline; opacity: 0.17;" height="25%" class=""> 
 
     <script type="text/javascript">
+        function Sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
+
         function renderTime() {
             var currentTime = new Date();
             var diem = "AM";
@@ -203,5 +479,6 @@
         }
         renderTime();
     </script>
+    <script type="text/javascript" src="./bin/snow.js"></script>
 </body>
 </html>
