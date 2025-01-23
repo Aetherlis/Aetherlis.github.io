@@ -23,6 +23,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            flex-direction: row;
         }
 
         p {
@@ -41,29 +42,23 @@
         .center {
             text-align: center;
             color: #ffffff;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px; /* Spacing between elements */
+            display: flex;
+            flex-direction: row; /* Align text horizontally */
             justify-content: center;
             align-items: center;
-            width: 80%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
         }
 
         .center-content {
             text-align: center;
+            margin: 20px;
         }
 
         #ascii {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            margin-top: 50px; /* Adjust spacing above the text */
+            align-items: flex-start; /* Align vertical text to the left */
+            margin-top: 50px;
+            justify-content: center; /* Vertically center the text */
         }
 
         #ascii p {
@@ -71,7 +66,7 @@
         }
 
         .centraaa {
-            margin: 20px; /* Space around the vertical ASCII text */
+            margin: 20px;
         }
 
         img {
@@ -92,60 +87,39 @@
 </head>
 <body>
     <div class="center">
-        <div class="grid">
-            <!-- Timer and links -->
-            <div class="center-content">
-                <p style="font-size: 150%; display: inline; white-space: nowrap; margin-right: 20px;">aetherlis</p>
-                <p id="clockDisplay">xx:xx:xx AM/PM</p>
-                <br>
-                <div>
-                    <a href="/roster">
-                        <p style="color: rgb(160, 91, 107);">roster</p>
-                    </a>
-                    <a href="/info">
-                        <p style="color: rgb(160, 91, 107);">info</p>
-                    </a>
-                </div>
-            </div>
-            <!-- GIF -->
-            <div class="center-content">
-                <img src="assets/images/lain.gif" alt="GIF">
+        <!-- Left section (text and links) -->
+        <div class="center-content">
+            <p style="font-size: 150%; display: inline; white-space: nowrap; margin-right: 20px;">aetherlis</p>
+            <p id="clockDisplay">xx:xx:xx AM/PM</p>
+            <br>
+            <div>
+                <a href="/roster">
+                    <p style="color: rgb(160, 91, 107);">roster</p>
+                </a>
+                <a href="/info">
+                    <p style="color: rgb(160, 91, 107);">info</p>
+                </a>
             </div>
         </div>
 
-        <!-- ASCII Section -->
+        <!-- Right section (GIF) -->
+        <div class="center-content">
+            <img src="assets/images/lain.gif" alt="GIF">
+        </div>
+
+        <!-- Vertical ASCII Section -->
         <section id="ascii">
             <div class="centraaa">
-                <p class="letter-0">
-                    <span style="color: rgb(160, 91, 107);" class="golden">e</span>
-                </p>
-                <p class="letter-1">
-                    <span style="color: rgb(160, 91, 107);" class="golden">n</span>
-                </p>
-                <p class="letter-2">
-                    <span style="color: rgb(160, 91, 107);" class="golden">v</span>
-                </p>
-                <p class="letter-3">
-                    <span style="color: rgb(160, 91, 107);" class="golden">o</span>
-                </p>
-                <p class="letter-4">
-                    <span style="color: rgb(160, 91, 107);" class="golden">r</span>
-                </p>
-                <p class="letter-5">
-                    <span style="color: rgb(160, 91, 107);" class="golden">e</span>
-                </p>
-                <p class="letter-6">
-                    <span style="color: rgb(160, 91, 107);" class="golden">.</span>
-                </p>
-                <p class="letter-7">
-                    <span style="color: rgb(160, 91, 107);" class="golden">l</span>
-                </p>
-                <p class="letter-8">
-                    <span style="color: rgb(160, 91, 107);" class="golden">o</span>
-                </p>
-                <p class="letter-9">
-                    <span style="color: rgb(160, 91, 107);" class="golden">l</span>
-                </p>
+                <p class="letter-0"><span style="color: rgb(160, 91, 107);" class="golden">e</span></p>
+                <p class="letter-1"><span style="color: rgb(160, 91, 107);" class="golden">n</span></p>
+                <p class="letter-2"><span style="color: rgb(160, 91, 107);" class="golden">v</span></p>
+                <p class="letter-3"><span style="color: rgb(160, 91, 107);" class="golden">o</span></p>
+                <p class="letter-4"><span style="color: rgb(160, 91, 107);" class="golden">r</span></p>
+                <p class="letter-5"><span style="color: rgb(160, 91, 107);" class="golden">e</span></p>
+                <p class="letter-6"><span style="color: rgb(160, 91, 107);" class="golden">.</span></p>
+                <p class="letter-7"><span style="color: rgb(160, 91, 107);" class="golden">l</span></p>
+                <p class="letter-8"><span style="color: rgb(160, 91, 107);" class="golden">o</span></p>
+                <p class="letter-9"><span style="color: rgb(160, 91, 107);" class="golden">l</span></p>
             </div>
         </section>
     </div>
