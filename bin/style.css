@@ -1,0 +1,168 @@
+html {
+  font-family: monospace;
+  cursor: url("./cursor.png"), auto;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+#overlay-toggle {
+  position: absolute;
+  display: none;
+}
+
+#particles-js {
+  background: black;
+  height: 100vh;
+}
+
+.overlay {
+  z-index: 2;
+  background-color: rgb(0, 0, 0);
+}
+.center {
+  z-index: 1;
+}
+
+.overlay label {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  height: 100vw;
+  color: rgb(255, 255, 255);
+  font-size: 2rem;
+}
+
+.no-hover {
+  display: block;
+}
+
+.disclaimer {
+  display: none;
+}
+
+.hover {
+  display: none;
+}
+
+.fullscreen {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: gray !important;
+  transition: .4s !important;
+}
+
+a:hover {
+  color: #D2768B !important
+}
+
+.ascii {
+  color: #D2768B !important;
+  top: 50%
+}
+
+.logo {
+  animation: spin 5000ms infinite linear;
+}
+
+span::before {
+  content: '\A';
+  white-space: pre
+}
+
+#overlay-toggle:checked~.overlay {
+  animation-fill-mode: forwards;
+  animation-name: fade, hide;
+  animation-delay: 0s, 600ms;
+  animation-duration: 600ms, 1ms;
+}
+
+#overlay-toggle:checked~.overlay label {
+  animation-fill-mode: forwards;
+  animation-name: fade;
+  animation-delay: 0s;
+  animation-duration: 500ms;
+}
+
+img {
+  animation: animateGlow 2s infinite;
+}
+
+@media(hover: hover) {
+  .hover {
+    display: block;
+  }
+
+  .no-hover {
+    display: none;
+  }
+}
+
+@keyframes fade {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes hide {
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+/* gold gradient thing */
+.golden {
+  background: linear-gradient(90deg, #D2768B, #D7AF70, #DA8E8E, #D9A3E1);
+  background-size: 400% 400%;
+  /* text clip */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  animation: gradient 5s ease infinite;
+}
+/* shine thing */
+.shine {
+  background: linear-gradient(90deg, #fafafa, #ce3bd3, #ce3bd3, #f0f0f0);
+  background-size: 400% 400%;
+  /* text clip */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  
+  animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
