@@ -11,51 +11,41 @@
     <title>Atherlis</title>
     <script src="./bin/fairydust.js"></script>
 
-    <script>
-        var Flip = true;
-
-        var CurStr = "";
-        var Pos = 0;
-        var Invert = false;
-
-        var TextL = "envore.lol";
-        var TextR = TextL;
-
-        function loop() {
-            var Target = Flip ? TextR : TextL;
-
-            if (Pos > Target.length) {
-                Invert = true;
-            } else if (Pos < 0) {
-                if (Invert) {
-                    Flip = !Flip;
-                    Target = Flip ? TextR : TextL;
-
-                    Pos = 0;
-                }
-
-                Invert = false;
+<script>
+    var Flip = true;
+    var CurStr = "";
+    var Pos = 0;
+    var Invert = false;
+    var TextL = "Atherlis";
+    var TextR = TextL;
+    function loop() {
+        var Target = Flip ? TextR : TextL;
+        if (Pos >= Target.length) {
+            Invert = true;
+        } else if (Pos <= 0) {
+            if (Invert) {
+                Flip = !Flip;
+                Target = Flip ? TextR : TextL;
+                Pos = 0; 
             }
-
-            CurStr = Target.substring(0, Pos);
-            Pos += (Invert ? -1 : 1);
-
-            if (CurStr.length == 0)
-                CurStr = TextL.charAt(0);
-
-            document.getElementsByTagName("title")[0].innerHTML = CurStr;
+            Invert = false;
         }
-
-        setInterval(loop, 300);
-
-    function audioPlay() {
-        var audio = document.getElementById("audio");
-        audio.src = assets/audio/${Math.floor(Math.random() * 6) + 1}.mp3;
-        audio.volume = 1;
-        audio.play();
+        CurStr = Target.substring(0, Pos);
+        Pos += (Invert ? -1 : 1);
+        if (CurStr.length == 0)
+            CurStr = TextL.charAt(0);
+        document.title = CurStr;
     }
 
-    </script>
+    setInterval(loop, 300);
+
+    //function audioPlay() {
+    //    var audio = document.getElementById("audio");
+    //    audio.src = `assets/audio/${Math.floor(Math.random() * 6) + 1}.mp3`;
+    //    audio.volume = 1;
+    //     audio.play();
+    //}
+</script>
     <link rel="stylesheet" type="text/css" href="./bin/style.css">
     <style type="text/css">.disclaimer { display: none }</style>
 </head>
