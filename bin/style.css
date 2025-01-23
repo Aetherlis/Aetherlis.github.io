@@ -1,14 +1,14 @@
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 100px; /* Add space between grid items */
-        justify-content: center;
-        align-items: center;
-        width: 80%;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
 
 
 
@@ -146,25 +146,22 @@ img {
   }
 }
 
-/* gold gradient thing */
-    .golden {
-        background: linear-gradient(90deg, #D2768B, #D7AF70, #DA8E8E, #D9A3E1);
-        background-size: 400% 400%;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        animation: gradient 5s ease infinite;
-        margin-right: 30px; /* Add margin to create space on the right side */
-    }
-/* shine thing */
-.shine {
-  background: linear-gradient(90deg, #fafafa, #ce3bd3, #ce3bd3, #f0f0f0);
+.golden {
+  background: linear-gradient(90deg, #D2768B, #D7AF70, #DA8E8E, #D9A3E1);
   background-size: 400% 400%;
-  /* text clip */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  
+  animation: gradient 5s ease infinite;
+  margin-right: 30px;
+}
+
+.shine {
+  background: linear-gradient(90deg, #fafafa, #ce3bd3, #ce3bd3, #f0f0f0);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   animation: gradient 5s ease infinite;
 }
 
