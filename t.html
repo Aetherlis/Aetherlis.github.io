@@ -3,9 +3,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="shortcut icon" type="image/png" href="favicon.png">
-    <meta content="envore.lol" property="og:title">
-    <meta content="welcome x_x" property="og:description">
-    <meta content="embed.gif" property="og:image">
+    <meta content="Atherlis" property="og:title">
+    <meta content="👽👽" property="og:description">
     <meta content="#D2768B" data-react-helmet="true" name="theme-color">
     <link rel="stylesheet" type="text/css" href="bin/style2.css">
     <title>Atherlis</title>
@@ -78,18 +77,15 @@
             </div>
         </section>
     </div>
-
-    <img src="assets/images/kyaru.png" style="position: fixed; bottom: 0px; right: 0px; display:inline; opacity: 0.17;" height="25%" class=""> 
-
+    
     <script type="text/javascript">
         function Sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
-
-        function renderTime() {
-            var currentTime = new Date();
+        function rendertimepls() {
+            var currentt = new Date();
             var diem = "AM";
-            var h = currentTime.getHours();
-            var m = currentTime.getMinutes();
-            var s = currentTime.getSeconds();
+            var h = currentt.getHours();
+            var m = currentt.getMinutes();
+            var s = currentt.getSeconds();
             setTimeout('renderTime()', 1000);
             if (h == 0) {
                 h = 12;
@@ -106,14 +102,13 @@
             if (s < 10) {
                 s = "0" + s;
             }
-            var myClock = document.getElementById('clockDisplay');
-            myClock.textContent = h + ":" + m + ":" + s + " " + diem;
-            myClock.innerText = h + ":" + m + ":" + s + " " + diem;
+            var maclock = document.getElementById('clockDisplay');
+            maclock.textContent = h + ":" + m + ":" + s + " " + diem;
+            maclock.innerText = h + ":" + m + ":" + s + " " + diem;
         }
-        renderTime();
+        rendertimepls();
     </script>
 </body>
-
     <script type="text/javascript" src="./bin/snow.js"></script>
 </body>
 </html>
