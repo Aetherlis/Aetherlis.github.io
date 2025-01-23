@@ -1,7 +1,7 @@
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 200px; /* Add space between grid items */
+        gap: 100px; /* Add space between grid items */
         justify-content: center;
         align-items: center;
         width: 80%;
