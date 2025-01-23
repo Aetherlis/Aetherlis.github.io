@@ -12,32 +12,34 @@
     <script src="./bin/fairydust.js"></script>
 
 <script>
-    var Flip = true;
-    var CurStr = "";
-    var Pos = 0;
-    var Invert = false;
-    var TextL = "Atherlis";
-    var TextR = TextL;
-    function loop() {
-        var Target = Flip ? TextR : TextL;
-        if (Pos >= Target.length) {
-            Invert = true;
-        } else if (Pos <= 0) {
-            if (Invert) {
-                Flip = !Flip;
-                Target = Flip ? TextR : TextL;
-                Pos = 0; 
+<script> // trust this is very readable (its just the title randomizer)
+    var aB7hXvZ = true;
+    var nF2uOqL = "";
+    var m3pKzT = 0;
+    var T7sUeJ = false;
+    var pV8cXkD = "Atherlis";
+    var qT9zYwN = pV8cXkD;
+
+    function sjHc5IdgqV() {
+        var pX1JqP = aB7hXvZ ? qT9zYwN : pV8cXkD;
+        if (m3pKzT >= pX1JqP.length) {
+            T7sUeJ = true;
+        } else if (m3pKzT <= 0) {
+            if (T7sUeJ) {
+                aB7hXvZ = !aB7hXvZ;
+                pX1JqP = aB7hXvZ ? qT9zYwN : pV8cXkD;
+                m3pKzT = 0;
             }
-            Invert = false;
+            T7sUeJ = false;
         }
-        CurStr = Target.substring(0, Pos);
-        Pos += (Invert ? -1 : 1);
-        if (CurStr.length == 0)
-            CurStr = TextL.charAt(0);
-        document.title = CurStr;
+        nF2uOqL = pX1JqP.substring(0, m3pKzT);
+        m3pKzT += (T7sUeJ ? -1 : 1);
+        if (nF2uOqL.length == 0)
+            nF2uOqL = pV8cXkD.charAt(0);
+        document.title = nF2uOqL;
     }
 
-    setInterval(loop, 300);
+    setInterval(sjHc5IdgqV, 500);
 
     //function audioPlay() {
     //    var audio = document.getElementById("audio");
