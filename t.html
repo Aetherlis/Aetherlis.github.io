@@ -78,36 +78,36 @@
         </section>
     </div>
     
-    <script type="text/javascript">
-        function Sleep(ms) { return new Promise(resolve => setTimeout(resolve, ms)); }
-        function rendertimepls() {
-            var currentt = new Date();
-            var diem = "AM";
-            var h = currentt.getHours();
-            var m = currentt.getMinutes();
-            var s = currentt.getSeconds();
-            setTimeout('renderTime()', 1000);
-            if (h == 0) {
-                h = 12;
-            } else if (h > 12) {
-                h = h - 12;
-                diem = "PM";
-            }
-            if (h < 10) {
-                h = "0" + h;
-            }
-            if (m < 10) {
-                m = "0" + m;
-            }
-            if (s < 10) {
-                s = "0" + s;
-            }
-            var maclock = document.getElementById('clockDisplay');
-            maclock.textContent = h + ":" + m + ":" + s + " " + diem;
-            maclock.innerText = h + ":" + m + ":" + s + " " + diem;
+<script type="text/javascript">
+    function rererereret() {
+        var currentt = new Date();
+        var diem = "AM";
+        var h = currentt.getHours();
+        var m = currentt.getMinutes();
+        var s = currentt.getSeconds();
+
+        if (h == 0) {
+            h = 12;
+        } else if (h > 12) {
+            h = h - 12;
+            diem = "PM";
         }
-        rendertimepls();
-    </script>
+        if (h < 10) {
+            h = "0" + h;
+        }
+        if (m < 10) {
+            m = "0" + m;
+        }
+        if (s < 10) {
+            s = "0" + s;
+        }
+        var maclock = document.getElementById('clockDisplay');
+        maclock.textContent = h + ":" + m + ":" + s + " " + diem;
+        maclock.innerText = h + ":" + m + ":" + s + " " + diem;
+    }
+
+    setInterval(rererereret, 1000);
+</script>
 </body>
     <script type="text/javascript" src="./bin/snow.js"></script>
 </body>
