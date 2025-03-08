@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OH GOD</title>
+    <style>
+        * { margin: 0; padding: 0; overflow: hidden; }
+        body { width: 100vw; height: 100vh; background-color: black; background-size: cover; background-position: center; display: flex; justify-content: center; align-items: flex-end; color: white; font-family: Arial, sans-serif; font-size: 20px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); }
+        .text { position: absolute; bottom: 20px; color: rgba(255, 255, 255, 0.2); }
+    </style>
+    <script>
+        function updt() {
+            document.body.style.backgroundImage = `url(https://thispersondoesnotexist.com/?timestamp=${new Date().getTime()})`;
+        }
+        setInterval(updt, 50);
+        window.onload = updt;
+    </script>
+</head>
+<body>
+    <div class="text">skibidi sigma @.bitdancer</div>
+</body>
+</html>
