@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    fix idk
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="image/png" href="https://aetherlis.github.io/bin/owl.png">
+    <meta name="theme-color" content="#000000">
+
+    <!-- OpenGraph & Twitter Metadata 
+    <meta property="og:type" content="video.other">
+    <meta property="og:video" content="https://files.catbox.moe/2c6al4.mp4">
+    <meta property="og:video:type" content="video/mp4">
+    <meta property="og:video:width" content="1280">
+    <meta property="og:video:height" content="720">
+    <meta property="og:url" content="https://files.catbox.moe/2c6al4.mp4">
+    <meta name="twitter:card" content="player">
+    <meta name="twitter:player" content="https://files.catbox.moe/2c6al4.mp4">
+    <meta name="twitter:player:width" content="1280">
+    <meta name="twitter:player:height" content="720">
+
+    <link rel="stylesheet" href="bin/style2.css">
+    <link rel="stylesheet" type="text/css" href="/bin/style.css"> 
+    
+    <style>
+        .disclaimer { display: none; }
+        #members-list a p { position: relative; display: inline-block; cursor: pointer; }
+        #members-list a p::after { content: ''; position: absolute; left: 0; bottom: 0; width: 0%; height: 2px; background-color: rgb(160, 91, 107); transition: width 0.3s ease-in-out; }
+        #members-list a p:hover::after { width: 97%; }
+        #members-list a p:not(:hover)::after { width: 0%; }
+        .unselectable { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+        #ascii .golden,
+        .center-content > p { cursor: default; }
+    </style>
+    <title>Aetherlis</title>
+</head>
+
+<body unselectable="on">
+    <span class="container" style="position:absolute;"></span>
+    <div class="center">
+        <div class="grid">
+            <div class="center-content">
+                <p class="unselectable" style="font-size: 150%; white-space: nowrap;">Members</p>
+                <div id="members-list"></div>
+            </div>
+            <div class="center-content">
+                <p class="unselectable" style="font-size: 150%; white-space: nowrap;">Projects</p>
+                <div id="projects-list"></div>
+            </div>
+        </div>
+
+        <section id="ascii" class="unselectable">
+            <div class="centraaa">
+                <p class="letter-0"><span class="golden" style="color: rgb(160, 91, 107);">A</span></p>
+                <p class="letter-1"><span class="golden" style="color: rgb(160, 91, 107);">e</span></p>
+                <p class="letter-2"><span class="golden" style="color: rgb(160, 91, 107);">t</span></p>
+                <p class="letter-3"><span class="golden" style="color: rgb(160, 91, 107);">h</span></p>
+                <p class="letter-4"><span class="golden" style="color: rgb(160, 91, 107);">e</span></p>
+                <p class="letter-5"><span class="golden" style="color: rgb(160, 91, 107);">r</span></p>
+                <p class="letter-6"><span class="golden" style="color: rgb(160, 91, 107);">l</span></p>
+                <p class="letter-7"><span class="golden" style="color: rgb(160, 91, 107);">i</span></p>
+                <p class="letter-8"><span class="golden" style="color: rgb(160, 91, 107);">s</span></p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        function updclock() {
+            const currentt = new Date();
+            let diem = "AM";
+            let h = currentt.getHours();
+            let m = currentt.getMinutes();
+            let s = currentt.getSeconds();
+
+            if (h == 0) h = 12;
+            else if (h > 12) { h -= 12; diem = "PM"; }
+            if (h < 10) h = "0" + h;
+            if (m < 10) m = "0" + m;
+            if (s < 10) s = "0" + s;
+
+            const mclock = document.getElementById('clockDisplay');
+            if (mclock) {
+               mclock.textContent = `${h}:${m}:${s} ${diem}`;  // This line was commented out in your original code.
+            }
+        }
+
+        setInterval(updclock, 1000);
+
+        async function load1() {
+            const response = await fetch("https://raw.githubusercontent.com/Aetherlis/.github/refs/heads/main/members.aetherlis");
+            const text = await response.text();
+            const members = text.trim().split('\n');
+            const container = document.getElementById("members-list");
+
+            members.forEach(member => {
+                const wrapper = document.createElement("div");
+                const link = document.createElement("a");
+                const guname = member === "Monolith" ? "gruzinskaya" : member;
+                link.href = `https://github.com/${guname}`;  // Fixed the href
+                link.innerHTML = `<p style="color: rgb(160, 91, 107);">${member}</p>`;  // Fixed the innerHTML syntax
+                wrapper.appendChild(link);
+                container.appendChild(wrapper);
+            });
+        }
+
+        async function load2() {
+            const response = await fetch("https://raw.githubusercontent.com/Aetherlis/.github/refs/heads/main/projects.aetherlis");
+            const text = await response.text();
+            const projects = text.trim().split('\n');
+            const container = document.getElementById("projects-list");
+            projects.forEach(project => {
+                const p = document.createElement("p");
+                p.style.color = "rgb(160, 91, 107)";
+                p.textContent = project;
+                container.appendChild(p);
+            });
+        }
+
+        load1();
+        load2();
+    </script>
+    <script src="./bin/snow.js"></script>
+</body>
+</html>
