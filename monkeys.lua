@@ -1,4 +1,4 @@
-local monkeys = {
+return {
     {name = "FlaseVanned", ID = 4457948881},
     {name = "z47h", ID = 537232828},
     {name = "sarrowfr", ID = 366196},
